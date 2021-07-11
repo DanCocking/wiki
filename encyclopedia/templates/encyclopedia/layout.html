@@ -12,17 +12,22 @@
         <div class="row">
             <div class="sidebar col-lg-2 col-md-3">
                 <h2>Wiki</h2>
-                <form>
+                <form action="{% url 'search' %}" method="get">
                     <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
                 </form>
+
                 <div>
                     <a href="{% url 'index' %}">Home</a>
                 </div>
                 <div>
+                    <a href="/create/">
                     Create New Page
+                    </a>
                 </div>
                 <div>
-                    Random Page
+                    <a href="/randomLink/">
+                        Random Page
+                    </a>
                 </div>
                 {% block nav %}
                 {% endblock %}
@@ -35,3 +40,4 @@
 
     </body>
 </html>
+
